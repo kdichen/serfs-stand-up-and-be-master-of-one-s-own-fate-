@@ -1,0 +1,18 @@
+
+// 写出带头结点的单链表结构上实现线性表操作Locate(L,x):
+解:
+int LocateElem_L(LinkList &L,ElemType x){
+	int i = 0;
+	LinkList p = L;
+	while(p && p -> data != x){
+		p = p -> next;
+		i ++;
+	}
+	if(!p) {
+		return 0;
+	}else{
+		return i;
+	}
+}
+
+
